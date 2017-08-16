@@ -9,12 +9,14 @@ class Votacion < ApplicationRecord
 	      }
 	      
 	      @votacion = JSON.parse res.body
-	      v = Votacion.new
-	      v.razon = @votacion["razon"]
-	      v.inicio= @votacion["inicio"]
-	      v.finalizacion = @votacion["finalizacion"]
-	      v.etapa = @votacion["etapa"]
-	      v.balotas = @votacion["balotas"]
-	      v.save
+	      if @votacion != nil
+		      v = Votacion.new
+		      v.razon = @votacion["razon"]
+		      v.inicio= @votacion["inicio"]
+		      v.finalizacion = @votacion["finalizacion"]
+		      v.etapa = @votacion["etapa"]
+		      v.balotas = @votacion["balotas"]
+		      v.save
+		  end
 		end
 end
