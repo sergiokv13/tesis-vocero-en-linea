@@ -30,7 +30,9 @@ class Partido < ApplicationRecord
 	      	p.color_secundario = partido["color_secundario"]
 	      	p.save
 	      end
-	      id = Partido.first.id-1
+	      if Partido.first != nil
+	      	id = Partido.first.id-1
+	      end
 	      @opcions.each do |opcion|
 	      	o = Opcion.new
 	      	o.nombre = opcion["nombre"]
