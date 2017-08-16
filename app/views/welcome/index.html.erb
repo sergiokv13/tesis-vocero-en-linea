@@ -1,16 +1,20 @@
 <h1>Vocero en linea</h1>
 <hr class="devider">
 
-<div class="col-lg-4">
-	<% if @votacion %>
-		<%= render "/welcome/votacion_info"%>
-	<% end %>
-</div>
+<% if @votacion != nil %>
+	<div class="col-lg-4">
+		<% if @votacion %>
+			<%= render "/welcome/votacion_info"%>
+		<% end %>
+	</div>
 
-<div class="col-lg-4">
-	<%= render "/welcome/partidos"%>
-</div>
+	<div class="col-lg-4">
+		<%= render "/welcome/partidos"%>
+	</div>
 
-<div class="col-lg-4">
-	<%= render "/welcome/acciones"%>
-</div>
+	<div class="col-lg-4">
+		<%= render "/welcome/acciones"%>
+	</div>
+<% else %>
+No hay votación en curso.
+<% end %>
