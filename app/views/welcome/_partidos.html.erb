@@ -1,0 +1,15 @@
+<h2>Partidos y opciones de voto</h2>
+<%@partidos.all.each do |partido|%>
+<p>
+	<h3><%=partido.nombre%></h3>
+	<div class="text-center">
+		<strong>Información: </strong><%=partido.informacion%><br>
+		<strong>Candidatos:</strong><br><br>
+		<% partido.opcions.each do |opcion| %>
+			<strong><%=opcion.nombre%> </strong><br>
+			<%=opcion.informacion%><br>
+		<% end %>
+	</div>
+</p>
+
+<%end%>

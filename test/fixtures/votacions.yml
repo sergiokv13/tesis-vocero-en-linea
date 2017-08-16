@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  razon: MyText
+  inicio: 2017-08-16 00:20:16
+  finalizacion: 2017-08-16 00:20:16
+  tiempo_maximo_de_votos: 1
+  etapa: MyString
+  balotas: 1
+
+two:
+  razon: MyText
+  inicio: 2017-08-16 00:20:16
+  finalizacion: 2017-08-16 00:20:16
+  tiempo_maximo_de_votos: 1
+  etapa: MyString
+  balotas: 1
