@@ -1,6 +1,10 @@
 <h2>Acciones</h2>
 <a href="/visualizar_papeleta">Visualizar papeleta</a><br>
 <h3>Reportes</h3>
-<a href="/totales">Ver resultado totales</a><br>
-<a href="/departamentos">Ver resultado por departamento</a><br>
-<a href="/sectores">Ver resultado por sector</a><br>
+<% if @votacion.etapa == "Previo a la votación" || @votacion.etapa == "Durante la votación"%>
+	Los reportes solo pueden ser vistos al finalizar la votación.
+<% else %>
+	<a href="/totales">Ver resultado totales</a><br>
+	<a href="/departamentos">Ver resultado por departamento</a><br>
+	<a href="/sectores">Ver resultado por sector</a><br>
+<% end %>
