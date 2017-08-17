@@ -81,7 +81,7 @@ class Reporte < ApplicationRecord
 			      g.data(data[0], data[1])
 			    end
 			    counter+=1
-		       g.write("/Users/sergiokv13/Programacion/Rails/Tesis/vocero_en_linea/app/assets/images/pie_sector_" + counter.to_s + ".png")      
+		       g.write("/home/rails/tesis-vocero-en-linea/app/assets/images/images/pie_sector_" + counter.to_s + ".png")      
 
       	end
       	return counter
