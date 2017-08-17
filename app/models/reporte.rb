@@ -22,7 +22,7 @@ class Reporte < ApplicationRecord
 	    @datasets.each do |data|
 	      g.data(data[0], data[1])
 	    end
-     g.write("/Users/sergiokv13/Programacion/Rails/Tesis/vocero_en_linea/app/assets/images/pietotal.png")
+     g.write("/home/rails/tesis-vocero-en-linea/app/assets/images/pietotal.png")
 	end
 
 	def self.crear_departamentos
@@ -50,7 +50,7 @@ class Reporte < ApplicationRecord
 		      g.data(data[0], data[1])
 		    end
 		    counter+=1
-	       g.write("/Users/sergiokv13/Programacion/Rails/Tesis/vocero_en_linea/app/assets/images/pie_departamento_" + counter.to_s + ".png")      
+	       g.write("/home/rails/tesis-vocero-en-linea/app/assets/images/pie_departamento_" + counter.to_s + ".png")      
 
       end
       return counter
